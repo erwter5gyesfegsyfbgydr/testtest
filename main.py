@@ -1,4 +1,7 @@
 import sys
+import os
+
+os.system('cls' if os.name == 'nt' else 'clear')
 
 def blue_to_white_gradient(text):
     lines = text.strip().split('\n')
@@ -6,7 +9,6 @@ def blue_to_white_gradient(text):
     num_lines = len(lines)
     
     for i, line in enumerate(lines):
-        # Градиент: от синего к белому
         intensity = int(255 * (i / max(num_lines - 1, 1)))
         r = intensity
         g = intensity
